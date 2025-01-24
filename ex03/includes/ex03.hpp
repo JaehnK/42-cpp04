@@ -9,7 +9,7 @@
 #include "IMateriaSource.hpp"
 #include "Character.hpp"
 #include "MateriaSource.hpp"
-#include "ICE.hpp"
-#include "CURE.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 #endif

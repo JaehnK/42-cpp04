@@ -1,7 +1,8 @@
 #ifndef AMATERIA_HPP
 #define AMATERIA_HPP
-#include "ex03.hpp"
+//#include "ICharacter.hpp"
 
+class ICharacter;
 class AMateria
 {
 	private:
@@ -12,13 +13,11 @@ class AMateria
 	public:
 		AMateria();
 		AMateria(std::string const &type);
-		~AMateria();
-		AMateria(const AMateria &rhs);
-		AMateria	&operator=(const AMateria &rhs);
+		virtual	~AMateria();
 
 		std::string const	&getType() const;
 		virtual	AMateria*	clone() const = 0;
-		virtual void		use(ICharacter& target); // 흠 이 함수 채워야하는데
+		virtual void		use(ICharacter& target);
 };
 
 #endif
