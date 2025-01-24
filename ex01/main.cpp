@@ -4,10 +4,21 @@
 
 int	main()
 {
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	delete j;
-	delete i;
+	Dog	*dog = new Dog;
+	Dog *dog2 = new Dog;
+
+	dog->setIdea("Hello");
+	dog->setIdea("World");
+	dog->setIdea("ABC");
+	dog->printIdea();
+
+	*dog2 = *dog;
+
+	delete dog;
+
+	dog2->setIdea("Dog");
+	dog2->printIdea();
 	
+	delete dog2;
 	return 0;
 }

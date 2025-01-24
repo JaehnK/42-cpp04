@@ -1,5 +1,5 @@
 C++ = clang++
-CPP_FLAGS = -Wall -Werror -Wextra -std=c++98 # -g -fsanitize=address
+CPP_FLAGS = -Wall -Werror -Wextra -std=c++98  -g -fsanitize=address
 
 SRCS =	main.cpp \
 		Animal.cpp \

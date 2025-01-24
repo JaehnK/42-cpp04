@@ -9,7 +9,7 @@ class Brain
 		int			idx;
 
 	protected:
-		std::string	*ideas;
+		std::string	ideas[100];
 	
 	public:
 		Brain();
@@ -19,6 +19,7 @@ class Brain
 		
 		void 		setIdea(std::string idea);
 		std::string getIdea(void);
+		void		printIdea();
 };
 
 #endif
