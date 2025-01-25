@@ -21,9 +21,9 @@ WrongAnimal::WrongAnimal(const WrongAnimal& rhs)
 
 WrongAnimal	&WrongAnimal::operator=(const WrongAnimal& rhs)
 {
+	std::cout << "[WrongAnimal]: Copy Operater Called" << std::endl;
 	if (this != &rhs)
 	{
-		std::cout << "[WrongAnimal]: Copy Operater Called" << std::endl;
 		this->type = rhs.type;
 	}
 	return (*this);
@@ -36,5 +36,5 @@ std::string	WrongAnimal::getType() const
 
 void	WrongAnimal::makeSound() const
 {
-	std::cout << this->type << std::endl;
+	std::cout << "MakeSound Not Available" << std::endl;
 }

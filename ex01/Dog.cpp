@@ -1,6 +1,6 @@
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog(): Animal()
 {
 	std::cout << "[Dog]: Constructer Called" << std::endl;
 	this->type = "Dog";
@@ -13,7 +13,7 @@ Dog::~Dog()
 	delete b;
 }
 
-Dog::Dog(const Dog& rhs)
+Dog::Dog(const Dog& rhs): Animal()
 {
 	std::cout << "[Dog]: Copy Constructer Called" << std::endl;
  	b = new Brain(*rhs.b);

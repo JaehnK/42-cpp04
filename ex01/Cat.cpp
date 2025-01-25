@@ -16,13 +16,19 @@ Cat::~Cat()
 Cat::Cat(const Cat& rhs): Animal()
 {
 	std::cout << "[Cat]: Copy Constructer Called" << std::endl;
-	*this = rhs;
+	b = new Brain(*rhs.b);
+	this->type = rhs.type;
 }
 
 Cat	&Cat::operator=(const Cat& rhs)
 {
 	std::cout << "[Cat]: Copy Operator Called" << std::endl;
-	this->type = rhs.type;
+	if (this != &rhs) 
+	{
+		delete b;
+     	b = new Brain(*rhs.b);
+		this->type = rhs.type;
+    }
 	return (*this);
 }
 
@@ -31,6 +37,14 @@ void	Cat::makeSound() const
 	std::cout << "[Cat]: Meow Meow" << std::endl;
 }
 
+void	Cat::setIdea(std::string idea)
+{
+	this->b->setIdea(idea);
+}
 
+void	Cat::printIdea()
+{
+	this->b->printIdea();
+}
 
 

@@ -36,5 +36,5 @@ std::string	Animal::getType() const
 
 void	Animal::makeSound() const
 {
-	std::cout << this->type << std::endl;
+	std::cout << "MakeSound Not Available" << std::endl;
 }
