@@ -10,7 +10,7 @@ MateriaSource::MateriaSource()
 MateriaSource::~MateriaSource()
 {
 	int i = 0;
-	while (list[i])
+	while (list[i] && i < 4)
 		delete list[i++];
 }
 
@@ -38,7 +38,7 @@ MateriaSource	&MateriaSource::operator=(const MateriaSource &rhs)
 void	MateriaSource::learnMateria(AMateria *a)
 {
 	int i = 0;
-	while (list[i])
+	while (i < 4 && list[i])
 		i++;
 	if (i < 4 && a)
 	{

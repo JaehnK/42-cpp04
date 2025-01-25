@@ -54,7 +54,7 @@ std::string const 	&Character::getName() const
 void	Character::equip(AMateria* m)
 {
 	int i = 0;
-	while (this->inventory[i])
+	while (this->inventory[i] && i < 4)
 		i++;
 	if (i < 4)
 	{
